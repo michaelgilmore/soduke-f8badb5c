@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { generatePuzzle, checkErrors, isBoardComplete, Board, Difficulty, Cell } from '@/lib/sudoku';
 import SudokuGrid from './SudokuGrid';
 import NumberPad from './NumberPad';
+import ThemeToggle from './ThemeToggle';
 import { cn } from '@/lib/utils';
 
 const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard'];
