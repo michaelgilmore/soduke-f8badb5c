@@ -10,7 +10,7 @@ interface NumberPadProps {
 
 export default function NumberPad({ onNumber, onErase, onNoteToggle, notesMode, counts }: NumberPadProps) {
   return (
-    <div className="w-full max-w-[min(90vw,28rem)] mx-auto space-y-2">
+    <div className="w-full max-w-[min(95vw,32rem)] mx-auto space-y-2">
       <div className="grid grid-cols-9 gap-1.5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => (
           <button
@@ -18,7 +18,7 @@ export default function NumberPad({ onNumber, onErase, onNoteToggle, notesMode, 
             onClick={() => onNumber(n)}
             disabled={counts[n] >= 9}
             className={cn(
-              'aspect-[3/4] sm:aspect-square rounded-md font-puzzle text-lg sm:text-xl font-semibold transition-all',
+              'aspect-square rounded-lg font-puzzle text-xl sm:text-2xl font-semibold transition-all min-h-[3rem] sm:min-h-[3.25rem]',
               'bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground',
               'active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed',
             )}
