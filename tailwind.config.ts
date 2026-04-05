@@ -13,7 +13,23 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        puzzle: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
+        display: ['"DM Serif Display"', 'Georgia', 'serif'],
+        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        cell: {
+          given: "hsl(var(--cell-given))",
+          input: "hsl(var(--cell-input))",
+          selected: "hsl(var(--cell-selected))",
+          highlight: "hsl(var(--cell-highlight))",
+          error: "hsl(var(--cell-error))",
+        },
+        grid: {
+          border: "hsl(var(--grid-border))",
+          "border-thin": "hsl(var(--grid-border-thin))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
