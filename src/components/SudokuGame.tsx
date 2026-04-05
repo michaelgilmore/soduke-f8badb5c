@@ -105,7 +105,11 @@ export default function SudokuGame() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center px-4 py-6 sm:py-10 font-body">
-      <h1 className="font-display text-3xl sm:text-4xl text-foreground mb-1">Sudoku</h1>
+      <div className="w-full max-w-[min(95vw,32rem)] flex items-center justify-between mb-1">
+        <div />
+        <h1 className="font-display text-3xl sm:text-4xl text-foreground">Sudoku</h1>
+        <ThemeToggle />
+      </div>
       <p className="text-muted-foreground text-sm mb-6">A classic number puzzle</p>
 
       {/* Difficulty + Timer */}
