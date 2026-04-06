@@ -65,6 +65,20 @@ export default function SudokuGame() {
       } else {
         newBoard[r][c].value = n;
         newBoard[r][c].notes = new Set();
+        // If correct, remove this number from notes in related cells
+        if (n === solution[r][c]) {
+          const br = Math.floor(r / 3) * 3;
+          const bc = Math.floor(c / 3) * 3;
+          for (let i = 0; i < 9; i++) {
+            newBoard[r][i].notes.delete(n);
+            newBoard[i][c].notes.delete(n);
+          }
+          for (let dr = br; dr < br + 3; dr++) {
+            for (let dc = bc; dc < bc + 3; dc++) {
+              newBoard[dr][dc].notes.delete(n);
+            }
+          }
+        }
       }
       setBoard(newBoard);
       setErrors(checkErrors(newBoard, solution));
